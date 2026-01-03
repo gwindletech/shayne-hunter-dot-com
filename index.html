@@ -7,12 +7,19 @@
 
   <style>
     :root {
-      --navy: #0b2545;
+      --primary: #6a3937;
+      --secondary: #ece4b7;
+      --accent: #3b0c11;
+      --neutral: #706563;
+      --muted: #f0f0f0;
+      --white: #ffffff;
+      --black: #000000;
+      /* --navy: #0b2545;
       --teal: #1fa4a9;
       --sand: #f4f1ec;
       --white: #ffffff;
       --text: #2a2a2a;
-      --muted: #6b7280;
+      --muted: #6b7280; */
     }
 
     * {
@@ -23,8 +30,8 @@
 
     body {
       font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      color: var(--text);
-      background: var(--sand);
+      color: var(--black);
+      background: var(--muted);
       line-height: 1.6;
     }
 
@@ -90,7 +97,7 @@
     .btn {
       display: inline-block;
       background: var(--white);
-      color: var(--navy);
+      color: var(--accent);
       padding: 0.9rem 2rem;
       border-radius: 999px;
       font-weight: 600;
@@ -98,7 +105,7 @@
     }
 
     .btn:hover {
-      background: #e6f7f8;
+      background: var(--secondary);
     }
 
     /* Sections */
@@ -109,12 +116,12 @@
     section h2 {
       font-size: 2.2rem;
       margin-bottom: 1rem;
-      color: var(--navy);
+      color: var(--primary);
     }
 
     section p.lead {
       max-width: 700px;
-      color: var(--muted);
+      color: var(--neutral);
       margin-bottom: 3rem;
     }
 
@@ -134,7 +141,7 @@
 
     .card h3 {
       margin-bottom: 0.5rem;
-      color: var(--navy);
+      color: var(--primary);
     }
 
     /* Tours */
@@ -150,7 +157,7 @@
 
     .tour img {
       width: 100%;
-      height: 220px;
+      height: 400px;
       object-fit: cover;
     }
 
@@ -160,7 +167,7 @@
 
     /* Contact */
     .contact {
-      background: linear-gradient(135deg, var(--navy), var(--teal));
+      background: linear-gradient(135deg, var(--secondary), var(--primary));
       color: var(--white);
       text-align: center;
     }
@@ -175,7 +182,7 @@
 
     /* Footer */
     footer {
-      background: #081c33;
+      background: var(--primary);
       color: #cbd5e1;
       padding: 2rem 0;
       font-size: 0.9rem;
@@ -212,15 +219,18 @@
 
       <div class="hero">
         <h1>Comedian</h1>
-        <p>Award-winning true-crime presenter of walking tours, stand-up shows, podcasts, and books</p>
+        <p>Award-winning presenter of stand-up shows, true-crime walking tours, podcasts, and books</p>
         <a href="#contact" class="btn">Bookings</a>
       </div>
     </div>
   </header>
 
-  <section id="about">
+    <section id="about">
     <div class="container">
       <h2>About Shayne</h2>
+      <p class="lead">
+        Azure Coast Developments is a premier Caribbean property developer specialising in high-end coastal residences, boutique resorts, and mixed-use communities.
+      </p>
       <p>
         Shayne Hunter is a trailblazing Australian comedian, known for sharp wit and fearless material. After being selected for the Melbourne International Comedy Festival’s Comedy Zone in 2010, he toured extensively, honing his unique voice. His acclaimed shows include Blaze Against The Machine (2018), tackling addiction, The Cognitive Dissident (2019) exploring ideology, and Crowd Control (2020), highlighting his masterful crowd work. In 2022, Shayne launched his popular True Crime Comedy Tours across major Australian cities. Whether challenging minds or igniting laughter, Shayne captivates audiences and leaves a lasting impression.
       </p>
@@ -234,6 +244,13 @@
 
       <div class="grid">
         <div class="tour">
+          <img src="./images/gpt-brisbane-2.png" alt="Marina development" />
+          <div>
+            <h3>Brisbane</h3>
+            <p>Mixed-use marina development with residences, retail, and dining.</p>
+          </div>
+        </div>
+        <div class="tour">
           <img src="./images/gpt-sydney.png" alt="Beachfront villas" />
           <div>
             <h3>Sydney</h3>
@@ -241,17 +258,10 @@
           </div>
         </div>
         <div class="tour">
-          <img src="./images/" alt="Resort development" />
+          <img src="./images/gpt-melbourne.png" alt="Resort development" />
           <div>
             <h3>Melbourne</h3>
             <p>A boutique eco-resort blending modern comfort with Caribbean character.</p>
-          </div>
-        </div>
-        <div class="tour">
-          <img src="./images/gpt-brisbane-lighter.png" alt="Marina development" />
-          <div>
-            <h3>Brisbane</h3>
-            <p>Mixed-use marina development with residences, retail, and dining.</p>
           </div>
         </div>
       </div>
