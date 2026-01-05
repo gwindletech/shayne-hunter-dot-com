@@ -102,6 +102,12 @@
       background: var(--secondary);
     }
 
+    .external-link {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
     /* Sections */
     section {
       padding: 5rem 0;
@@ -117,6 +123,12 @@
       max-width: 700px;
       color: var(--neutral);
       margin-bottom: 3rem;
+    }
+
+    /* About */
+    #about a {
+      color: var(--neutral);
+      text-decoration: none;
     }
 
     /* Other Stuff */
@@ -276,7 +288,7 @@
     <div class="container">
       <h2>About Shayne</h2>
       <p class="lead">
-        "[...] he is entitled to speak loudly on public transport." - Media Watch, 30 Oct 2017
+        <a href="https://www.abc.net.au/mediawatch/episodes/confessions-of-a-homegrown-terrorist/9972436">"[...] he is entitled to speak loudly on public transport." - Media Watch, 30 Oct 2017</a>
       </p>
       <p>
         Shayne Hunter is a trailblazing Australian comedian, known for sharp wit and fearless material. After being selected for the Melbourne International Comedy Festival’s Comedy Zone in 2010, he toured extensively, honing his unique voice. His acclaimed shows include Blaze Against The Machine (2018), tackling addiction, The Cognitive Dissident (2019), which explored ideology, and Crowd Control (2020), highlighting his masterful crowd work. In 2022, Shayne launched his popular True Crime Comedy Tours across major Australian cities. Whether challenging minds or igniting laughter, Shayne captivates audiences and leaves a lasting impression.
@@ -290,27 +302,45 @@
       <p class="lead">Learn about your city's dark history</p>
 
       <div class="grid">
-        <div class="tour">
-          <img src="./images/gpt-brisbane.png" alt="Marina development" />
-          <div>
-            <h3>Brisbane</h3>
-            <p>Turns out its worst crime isn't its haircuts.</p>
+        <a
+          href="https://www.eventbrite.com/e/true-crime-walking-tour-a-comedians-guide-to-brisbanes-dark-past-tickets-263919068037"
+          class="external-link"
+          target="_blank"
+          rel="noopener noreferrer">
+          <div class="tour">
+            <img src="./images/gpt-brisbane.png" alt="Marina development" />
+            <div>
+              <h3>Brisbane</h3>
+              <p>Turns out its worst crime isn't its haircuts.</p>
+            </div>
           </div>
-        </div>
-        <div class="tour">
-          <img src="./images/gpt-sydney.png" alt="Beachfront villas" />
-          <div>
-            <h3>Sydney</h3>
-            <p>Leading the pack in horrific deeds since 1788.</p>
+        </a>
+        <a
+          href="https://sydneyfringe.com/events/true-crime-comedy-walking-tour-2/"
+          class="external-link"
+          target="_blank"
+          rel="noopener noreferrer">
+          <div class="tour">
+            <img src="./images/gpt-sydney.png" alt="Beachfront villas" />
+            <div>
+              <h3>Sydney</h3>
+              <p>Leading the pack in horrific deeds since 1788.</p>
+            </div>
           </div>
-        </div>
-        <div class="tour">
-          <img src="./images/gpt-melbourne.png" alt="Resort development" />
-          <div>
-            <h3>Melbourne</h3>
-            <p>Locals prefer to refer to its past in terms of 'vibrancy', 'culture', and 'post-modernism'.</p>
+        </a>
+        <a
+          href="https://www.comedyfestival.com.au/browse-shows/true-cime-comedy-walking-tour-comedian-guide-to-melbourne-s-dark-past/"
+          class="external-link"
+          target="_blank"
+          rel="noopener noreferrer">
+          <div class="tour">
+            <img src="./images/gpt-melbourne.png" alt="Resort development" />
+            <div>
+              <h3>Melbourne</h3>
+              <p>Locals prefer to refer to its past in terms of 'vibrancy', 'culture', and 'post-modernism'.</p>
+            </div>
           </div>
-        </div>
+        </a>
       </div>
     </div>
   </section>
@@ -321,16 +351,28 @@
       <p class="lead">Take a look at Shayne's other projects</p>
 
       <div class="grid">
+        <a
+          href="https://www.facebook.com/ShayneHunterComedian1/"
+          class="external-link"
+          target="_blank"
+          rel="noopener noreferrer">
+          <div class="card">
+            <h3>Stand-Up</h3>
+            <p>Check out where Shayne will be performing next.</p>
+          </div>
+        </a>
+        <a
+          href="https://open.spotify.com/show/237zGr5EFoxsnBiCWCeRw1"
+          class="external-link"
+          target="_blank"
+          rel="noopener noreferrer">
+          <div class="card">
+            <h3>Podcast</h3>
+            <p>Perfect for drowning out the internalised voice of your parents.</p>
+          </div>
+        </a>
         <div class="card">
-          <h3>Stand-Up</h3>
-          <p>Check out where Shayne will be performing next.</p>
-        </div>
-        <div class="card">
-          <h3>Podcasts</h3>
-          <p>Perfect for drowning out the internalised voice of your parents.</p>
-        </div>
-        <div class="card">
-          <h3>Books</h3>
+          <h3>Books - COMING SOON</h3>
           <p>This format was once popular.</p>
         </div>
       </div>
