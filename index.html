@@ -14,12 +14,6 @@
       --muted: #f0f0f0;
       --white: #ffffff;
       --black: #000000;
-      /* --navy: #0b2545;
-      --teal: #1fa4a9;
-      --sand: #f4f1ec;
-      --white: #ffffff;
-      --text: #2a2a2a;
-      --muted: #6b7280; */
     }
 
     * {
@@ -297,7 +291,7 @@
 
       <div class="grid">
         <div class="tour">
-          <img src="./images/gpt-brisbane-2.png" alt="Marina development" />
+          <img src="./images/gpt-brisbane.png" alt="Marina development" />
           <div>
             <h3>Brisbane</h3>
             <p>Turns out its worst crime isn't its haircuts.</p>
@@ -347,7 +341,7 @@
     <div class="container">
       <h2>Contact Shayne</h2>
       <p>For bookings, enquiries, thinly-veiled threats</p>
-      <a href="mailto:hunterjournalism.88@gmail.com" class="btn">hunterjournalism.88@gmail.com</a>
+      <a id="email-link" class="btn">Email</a>
     </div>
   </section>
 
@@ -357,6 +351,15 @@
       <p>Comedian and Creator</p>
     </div>
   </footer>
+
+  <script>
+    const user = "hunterjournalism.88";
+    const domain = "gmail.com";
+
+    const emailLink = document.getElementById("email-link");
+    emailLink.href = `mailto:${user}@${domain}`;
+    emailLink.textContent = `${user}@${domain}`;
+  </script>
 
 </body>
 </html>
