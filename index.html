@@ -27,7 +27,12 @@
       font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
       color: var(--black);
       background: var(--muted);
-      line-height: 1.6;
+      opacity: 0;
+      transition: opacity 0.5s ease-in;
+    }
+
+    body.loaded {
+      opacity: 1;
     }
 
     /* Layout */
@@ -417,18 +422,23 @@
     emailLink.textContent = `${user}@${domain}`;
 
     const header = document.getElementById("header");
+    const body = document.body;
 
     const img = new Image();
     img.src = "./images/shayne-dapper-compressed.jpg";
 
-    function showHeader() {
-      header.classList.add("loaded");
+    function showHeaderThenBody() {
+      header.classList.add("loaded");         // fade in header
+      setTimeout(() => {                       // delay for body fade
+        body.classList.add("loaded");
+      }, 300); // 300ms after header starts fading
     }
 
+    // ensure fade works even if image is cached
     if (img.complete) {
-      showHeader();
+      requestAnimationFrame(showHeaderThenBody);
     } else {
-      img.onload = showHeader;
+      img.onload = () => requestAnimationFrame(showHeaderThenBody);
     }
   </script>
 
