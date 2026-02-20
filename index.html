@@ -402,8 +402,8 @@
 
   <footer>
     <div class="container">
-      <p>© 2026 Shayne Hunter</p>
-      <p>Comedian and Creator</p>
+      <p>© <span id="year"></span> Shayne Hunter</p>
+      <p>Comedian</p>
     </div>
   </footer>
 
@@ -425,6 +425,11 @@
     }
 
     img.onload = fadeInBody;
+
+    const yearEl = document.getElementById("year");
+    if (yearEl) {
+      yearEl.textContent = new Date().getFullYear();
+    }
   </script>
 
 </body>
