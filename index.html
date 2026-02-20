@@ -424,11 +424,7 @@
       body.classList.add("loaded");
     }
 
-    if (img.complete) {
-      fadeInBody();
-    } else {
-      img.onload = fadeInBody;
-    }
+    img.onload = fadeInBody;
   </script>
 
 </body>
