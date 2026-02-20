@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shayne Hunter | Comedian</title>
+  <link rel="preload" as="image" href="./images/shayne-dapper-compressed.jpg">
 
   <style>
     :root {
@@ -36,11 +37,18 @@
     }
 
     /* Header */
-    header {
-      background: linear-gradient(135deg, rgba(5, 5, 5, 0.95), rgba(255, 248, 196, 0.55)),
-                  url('./images/shayne-dapper-compressed.jpg') center 30% / cover no-repeat;
+    #header {
+      opacity: 0;
+      transition: opacity 0.5s ease-in;
       color: var(--white);
       padding: 4rem 0 6rem;
+    }
+
+    #header.loaded {
+      background: linear-gradient(135deg, rgba(5, 5, 5, 0.95), rgba(255, 248, 196, 0.55)),
+                  url('./images/shayne-dapper-compressed.jpg') center 30% / cover no-repeat;
+
+      opacity: 1;
     }
 
     nav {
@@ -264,7 +272,7 @@
 
 <body>
 
-  <header>
+  <header id="header">
     <div class="container">
       <nav>
         <div class="logo">SHAYNE HUNTER</div>
@@ -407,6 +415,21 @@
     const emailLink = document.getElementById("email-link");
     emailLink.href = `mailto:${user}@${domain}`;
     emailLink.textContent = `${user}@${domain}`;
+
+    const header = document.getElementById("header");
+
+    const img = new Image();
+    img.src = "./images/shayne-dapper-compressed.jpg";
+
+    function showHeader() {
+      header.classList.add("loaded");
+    }
+
+    if (img.complete) {
+      showHeader();
+    } else {
+      img.onload = showHeader;
+    }
   </script>
 
 </body>
